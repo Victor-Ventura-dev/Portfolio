@@ -50,13 +50,28 @@
 
 }
 
+::-webkit-scrollbar {
+
+    -webkit-appearance: none;
+    width: 15px;
+    background-color: #000000;
+  
+  }
+  
+::-webkit-scrollbar-thumb 
+{
+    background-color:  rgb(235, 189, 6) ;
+    border-radius: 2%;
+    border: 1px solid #000000;
+}
 
 body
 {
     background: linear-gradient(90deg, #000000 50%, rgb(235, 189, 6) 50%);
     font-family: 'monospace','roboto','courier';
     color: white;
-    cursor: url(../Design/assets/katana3.cur), pointer;;
+    cursor: url(../Design/assets/katana3.cur), pointer;
+    
 }
 
 body, p, h1, h2, ul
@@ -202,7 +217,7 @@ i
 
         .info-p
         {
-           
+            text-align: justify;
             color: black;
             font-weight: bold;
             justify-self: start;
@@ -318,20 +333,54 @@ i
     {
         width: 80px;
         height: 80px;
-        margin-left: 10px;
+        margin-left: 12px;
     }
 
     .info-p
     {
-        font-size: 9pt;
+        font-size: 10pt;
+    }
+   
+
+    .profile-card
+    {
+        width:380px;
+        height:480px;
+        font-size: 12pt;
+    }
+
+    .icon:hover~.content
+    {
+       display: none;
+    }
+
+    .icon:hover~.option
+    {
+       animation: none;
+    }
+}
+
+@media (max-width: 850px) 
+{
+    
+    .profile-face
+    {
+        width: 70px;
+        height: 70px;
+        margin-left: 7px;
+    }
+
+    .info-p
+    {
+        font-size: 10pt;
     }
    
 
     .profile-card
     {
         width:320px;
-        height:400px;
-        font-size: 12pt;
+        height:460px;
+        font-size: 10pt;
     }
 
    
@@ -339,7 +388,7 @@ i
 
 
 
-@media (max-width: 550px) 
+@media (max-width: 750px) 
 {
     .container
     {
@@ -362,9 +411,8 @@ i
     .profile-title
     {
         font-size: 10pt;
-        margin-top: 12px;
-        margin-right: 22px;
         margin-top: 20px;
+        margin-right: 22px;
     }
 
     .info-p
@@ -374,12 +422,11 @@ i
    
     .profile-face
     {
-        width: 40px;
-        height: 40px;
+        width: 65px;
+        height: 65px;
         margin-left: 10px;
     }
 
-    
     
     .card-content
     {
@@ -395,17 +442,14 @@ i
     .head-2
     {
         font-size: 16pt;
+        background: linear-gradient(90deg, #fff 48%, #000000 45%);
+        background-clip:text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
     }
 
-    .icon:hover~.content
-    {
-       display: none;
-    }
-
-    .icon:hover~.option
-    {
-       animation: none;
-    }
+   
 
     .card-title
     {
