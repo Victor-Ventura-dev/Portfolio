@@ -208,7 +208,6 @@ i
             justify-self: start;
             margin-left: 20px;
             width: 70%;
-
         }
 
         
@@ -319,7 +318,6 @@ i
     {
         width: 80px;
         height: 80px;
-             
         margin-left: 10px;
     }
 
@@ -335,35 +333,54 @@ i
         height:400px;
         font-size: 12pt;
     }
+
+   
 }
 
 
 
 @media (max-width: 550px) 
 {
-    .profile-title
+    .container
     {
-        font-size: 10pt;
-        margin-top: 12px;
-        margin-right: 5px;
+        grid-template-rows: 0.01fr 0.5fr 0.6fr 0.7fr 0.04fr;
     }
 
-    .info-p
+    .profile 
     {
-        font-size: 4pt;
+        grid-template-columns: none;
+        grid-template-rows: 2fr 2fr;
     }
 
     .profile-card
     {
-        width:140px;
-        height:180px;
+        width: 236px;
+        height: 300px;
+        box-shadow: 0px 2px 20px black;
     }
 
-    .container
+    .profile-title
     {
-        grid-template-rows: 0.1fr 0.22fr 0.3fr 0.7fr 0.04fr;
+        font-size: 10pt;
+        margin-top: 12px;
+        margin-right: 22px;
+        margin-top: 20px;
     }
 
+    .info-p
+    {
+        font-size: 8pt;
+    }
+   
+    .profile-face
+    {
+        width: 40px;
+        height: 40px;
+        margin-left: 10px;
+    }
+
+    
+    
     .card-content
     {
         width: 246px;
@@ -406,10 +423,5 @@ i
         font-size: 11pt;
     }
 
-    .profile-face
-    {
-                width: 40px;
-                height: 40px;
-                margin-left: 10px;
-    }
+    
 }
