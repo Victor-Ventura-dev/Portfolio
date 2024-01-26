@@ -63,23 +63,29 @@ body
 }
 /* Fin página principal */
 
+/* Inicio página experiencia */
 .exp
 {
     background: #1E1849;
     display: grid;
     grid-template-rows: 25vh 22vh 10vh 21vh;
 }
+/* Fin página experiencia */
 
+/* Inicio página proyectos */
 .apps
 {
     background: linear-gradient(to right bottom , #9178FE 69.9%, #1E1849 69.9%);
     display: grid;
     grid-template-rows: 19vh 59vh;
 }
+/* Fin página proyectos */
 
+/* Inicio página sobre mí */
 .about
 {
     background: linear-gradient(to right top , #1E1849 70%, #9178FE 70%);
     display: grid;
     grid-template-rows: 25vh 53vh;
 }
+/* Fin página sobre mí */
