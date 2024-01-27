@@ -1,8 +1,13 @@
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-  }
+
+:root {
+    --main-color: #1E1849;
+    --secondary-color: #9178FE;
+    --main-font: 'Rochercolor';
+    --secondary-font: 'Roboto';
+    --main-header: 4.8em;
+    --secondary-header: 2.4em;
+    --parragraph-s1: 1.2em;
+}
 
 @font-face {
     font-family: 'RocherColor';
@@ -12,29 +17,48 @@
     font-style: normal;
 }
 
+
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
 body
 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--secondary-font);
+    background: var(--main-color) ;
+    color: #fff;
 }
+
+.container, .home
+{
+    display: grid;
+}
+
 
 .container
 {
-    display: grid;
     grid-template-rows: 5vh 95vh 100vh 100vh 100vh;
 }
 
 /* Inicio menú de navegación */
 
-.navBar
+.navBar, .list, .desc
 {
     display: flex;
+}
+
+
+.navBar
+{
     justify-content: center;
-    background: #1E1849 ;
+    background: var(--main-color) ;
 }
 
     .list
     {
-        display: flex;
         flex-direction: row;
         list-style: none;
         position: fixed;
@@ -47,10 +71,11 @@ body
 
             .link
             {
-                color: whitesmoke;
+                font-family: var(--secondary-font);
+                color: #fff;
                 text-decoration: none;
                 text-transform: uppercase;
-                font-size:  1.4em;;
+                font-size:  1.4em;
             }
 
 /* Fin menú de navegación */
@@ -59,27 +84,35 @@ body
 
 .home
 {
-    background: linear-gradient(to right bottom , #1E1849  50%, #9178FE 50%);
-}
-/* Fin página principal */
-
-.exp
-{
-    background: #1E1849;
-    display: grid;
-    grid-template-rows: 25vh 22vh 10vh 21vh;
+    background: linear-gradient(to right bottom , var(--main-color)  50%, var(--secondary-color) 50%);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 95vh;
 }
 
-.apps
+.desc
 {
-    background: linear-gradient(to right bottom , #9178FE 69.9%, #1E1849 69.9%);
-    display: grid;
-    grid-template-rows: 19vh 59vh;
+    flex-direction: column;
+    justify-self: center;
 }
 
-.about
+.desc > h2
 {
-    background: linear-gradient(to right top , #1E1849 70%, #9178FE 70%);
-    display: grid;
-    grid-template-rows: 25vh 53vh;
+    padding-top: 15vh;
+    font-size: var(--main-header);
+    font-family: var(--main-font);
+}
+
+.desc > h3
+{
+    padding-top: 20px;
+    text-align: center;
+    font-size: var(--secondary-header);
+    font-family: var(--secondary-font);
+}
+
+.desc > p
+{
+    padding-top: 5vh;
+    font-family: var(--secondary-font);
+    font-size: var(--parragraph-s1);
 }
